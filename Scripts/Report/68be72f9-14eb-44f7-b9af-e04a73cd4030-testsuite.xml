@@ -1,0 +1,28 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1539068638955" stop="1539068656690">
+  <name>test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1539068638955" status="broken" stop="1539068656690">
+      <name>TestLogin.test_login</name>
+      <failure>
+        <message>FixtureLookupError: ('username', &lt;FixtureRequest for &lt;Function 'test_login'&gt;&gt;)</message>
+        <stack-trace>file E:\BaiNianAoLai\Scripts\test_login.py, line 19
+      def test_login(self,username,password,expect,toast_expect):
+E       fixture 'username' not found
+&gt;       available fixtures: cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_xml_attribute, record_xml_property, recwarn, tmpdir, tmpdir_factory
+&gt;       use 'pytest --fixtures [testpath]' for help on them.
+
+E:\BaiNianAoLai\Scripts\test_login.py:19</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4216-MainThread"/>
+        <label name="host" value="ZGC-20180627YWW"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
