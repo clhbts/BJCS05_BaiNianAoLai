@@ -47,12 +47,12 @@ class PageLogin(Base):
     # 点击退出
     @allure.step("点击退出账号")
     def page_click_exit(self):
-        self.base_click(Page.exit_btn)
+        self.base_xpath(Page.exit_btn).click()
 
     # 确认退出
     @allure.step("确认退出账号")
     def page_click_exit_ok(self):
-        self.base_click(Page.exit_ok)
+        self.base_xpath(Page.exit_ok).click()
 
     # 登录封装
     def page_login(self, username, password):
@@ -82,3 +82,10 @@ class PageLogin(Base):
     @allure.step("获取nickname方法")
     def page_get_nickname(self):
         return self.base_get_text(Page.me_nickname)
+
+
+
+
+
+
+

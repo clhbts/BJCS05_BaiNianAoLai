@@ -1,0 +1,18 @@
+add_address:
+ BN_test_address_01:
+   receipt_name: "zhangsan"
+   add_phone: "15650788058"
+   sheng: "河北省"
+   shi: "唐山市"
+   qu: "丰南区"
+   detail_addr: "碧桂园小区"
+   post_code: "064100"
+update_address:
+  BN_test_address_01:
+   receipt_name: "lisi"
+   add_phone: "15600000000"
+   sheng: "河北省"
+   shi: "石家庄市"
+   qu: "长安区"
+   detail_addr: "某某某小区"
+   post_code: "062000"

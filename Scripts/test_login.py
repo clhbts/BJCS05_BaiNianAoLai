@@ -1,7 +1,6 @@
 import os, sys
 sys.path.append(os.getcwd())
 
-
 import allure
 import pytest
 from Page.page_login import PageLogin
@@ -29,7 +28,7 @@ class TestLogin():
         # 退出driver驱动
         self.login.driver.quit()
 
-    @pytest.mark.paramentrize("username,password,expect,toast_expect")
+    @pytest.mark.parametrize("username,password,expect,toast_expect",get_data())
     def test_login(self, username, password, expect, toast_expect):
         if expect:
             try:
@@ -41,7 +40,7 @@ class TestLogin():
                 self.login.page_click_login_btn()
                 # 断言
                 assert expect in self.login.page_get_nickname()
-                allure.attach("正向断言成功")
+                allure.attach("描述:","登录成功")
                 # 退出操作
                 self.login.page_login_logout()
                 # 点击我
@@ -66,7 +65,7 @@ class TestLogin():
                 self.login.page_click_login_btn()
                 # 断言
                 assert toast_expect in self.login.base_get_toast(toast_expect)
-                allure.attach("逆向断言成功")
+                allure.attach("断言描述","逆向断言成功")
             except:
                 # 截图
                 self.login.base_getImage()

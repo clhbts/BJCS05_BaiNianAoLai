@@ -1,4 +1,6 @@
 from appium import webdriver
+
+
 def get_driver():
     # server 启动参数
     desired_caps = {}

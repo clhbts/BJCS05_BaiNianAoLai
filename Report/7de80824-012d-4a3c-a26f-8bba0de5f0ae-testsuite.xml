@@ -1,0 +1,111 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1539313562890" stop="1539313595537">
+  <name>test_address</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1539313562890" status="failed" stop="1539313595537">
+      <name>TestAddress.test_delect_address</name>
+      <failure>
+        <message>AttributeError: 'TestAddress' object has no attribute 'login'</message>
+        <stack-trace>self = &lt;test_address.TestAddress object at 0x0000000004657048&gt;
+
+    @pytest.mark.run(order=3)
+    def test_delect_address(self):
+        # 点击编辑
+        self.address.page_address_right_btn()
+        # 点击删除
+        self.address.page_address_delete()
+        # 确认删除
+        self.address.page_address_delete_ok()
+        try:
+            # 断言 是否修改成功
+&gt;           assert self.address.page_is_delete()
+E           AssertionError: assert False
+E            +  where False = &lt;bound method PageAddress.page_is_delete of &lt;Page.page_address.PageAddress object at 0x00000000046B29B0&gt;&gt;()
+E            +    where &lt;bound method PageAddress.page_is_delete of &lt;Page.page_address.PageAddress object at 0x00000000046B29B0&gt;&gt; = &lt;Page.page_address.PageAddress object at 0x00000000046B29B0&gt;.page_is_delete
+E            +      where &lt;Page.page_address.PageAddress object at 0x00000000046B29B0&gt; = &lt;test_address.TestAddress object at 0x0000000004657048&gt;.address
+
+Scripts\test_address.py:119: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test_address.TestAddress object at 0x0000000004657048&gt;
+
+    @pytest.mark.run(order=3)
+    def test_delect_address(self):
+        # 点击编辑
+        self.address.page_address_right_btn()
+        # 点击删除
+        self.address.page_address_delete()
+        # 确认删除
+        self.address.page_address_delete_ok()
+        try:
+            # 断言 是否修改成功
+            assert self.address.page_is_delete()
+        except:
+            # 截图
+&gt;           self.login.base_getImage()
+E           AttributeError: 'TestAddress' object has no attribute 'login'
+
+Scripts\test_address.py:122: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="10004-MainThread"/>
+        <label name="host" value="ZGC-20180627YWW"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1539313577250" status="passed" stop="1539313579390">
+          <name>点击我的</name>
+          <title>点击我的</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313579390" status="passed" stop="1539313581739">
+          <name>点击已有账号，去登录</name>
+          <title>点击已有账号，去登录</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313581739" status="passed" stop="1539313584044">
+          <name>输入账号</name>
+          <title>输入账号</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313584044" status="passed" stop="1539313586635">
+          <name>输入密码</name>
+          <title>输入密码</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313586635" status="passed" stop="1539313587176">
+          <name>点击登录按钮</name>
+          <title>点击登录按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313587176" status="passed" stop="1539313589259">
+          <name>点击设置</name>
+          <title>点击设置</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313589259" status="passed" stop="1539313591134">
+          <name>点击地址管理</name>
+          <title>点击地址管理</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1539313591134" status="passed" stop="1539313592706">
+          <name>编辑</name>
+          <title>编辑</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

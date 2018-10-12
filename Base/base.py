@@ -6,6 +6,10 @@ class Base():
     # 查找元素  给谁用？？？ 下面的方法
     def base_find_element(self,loc,timeout=30,poll=0.5):
         return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))
+
+    # 查找一组元素
+    def base_find_elements(self, loc, timeout=30, poll=0.5):
+        return WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll).until(lambda x: x.find_elements(*loc))
     # 点击
     def base_click(self,loc):
         # 调用自己封装查找元素类
